@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<title>Parser</title>
+		<script type="text/javascript" src="PAE.js"></script>
+		<script type="text/javascript">
+			function parse(){
+				var data = document.getElementById('pf').value;
+				if ( /^ *$/.test(data) ) {
+					alert('Enter arithmetic expression');
+					return false;
+				}
+				document.getElementById('result').innerHTML = PAE(data);
+			}
+		</script>
+	</head>
+	<body>
+		<div>
+			<label for="pf">Enter your arithmetic expression here:</label>
+			<input id="pf" type="text" value="" style="width: 400px;" />
+			<button onclick="parse()">Submit</button>
+		</div>
+		<div id="result"></div>
+	</body>
+</html>
